@@ -1,0 +1,2529 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="7.7.0">
+ </head> 
+ <body> 
+  <vaadin-horizontal-layout style-name="app-shell" responsive size-full> 
+   <vaadin-css-layout style-name="navigation-bar-container" width="200px" height-full> 
+    <vaadin-css-layout style-name="navigation-bar" size-full> 
+     <vaadin-label style-name="logo" plain-text>
+       Specimen Selector 
+     </vaadin-label> 
+     <vaadin-button icon="fonticon://FontAwesome/f0c9" style-name="menu borderless" plain-text _id="menuButton">
+       Menu 
+     </vaadin-button> 
+     <vaadin-css-layout style-name="navigation" width-full _id="menu"> 
+      <vaadin-button icon="fonticon://FontAwesome/f002" style-name="borderless" width-full plain-text _id="search">
+        Search 
+      </vaadin-button> 
+      <vaadin-button icon="fonticon://FontAwesome/f0ce" style-name="borderless" width-full plain-text _id="review">
+        Review 
+      </vaadin-button> 
+      <vaadin-button icon="fonticon://FontAwesome/f061" style-name="borderless" width-full plain-text _id="cont">
+        Continue 
+      </vaadin-button> 
+     </vaadin-css-layout> 
+    </vaadin-css-layout> 
+   </vaadin-css-layout> 
+   <vaadin-vertical-layout style-name="content-container" size-full :expand> 
+    <vaadin-label style-name="view-title" plain-text _id="viewTitle">
+      View title 
+    </vaadin-label> 
+    <vaadin-css-layout size-full _id="content" :expand> 
+     <vaadin-css-layout style-name="padding-right padding-bottom padding-left" size-full> 
+      <vaadin-css-layout style-name="content-section padding" size-full> 
+       <vaadin-vertical-layout size-auto> 
+        <vaadin-horizontal-layout spacing width-full> 
+         <vaadin-tab-sheet icon="fonticon://FontAwesome/f0b0" caption="Search Filters" size-auto> 
+          <tab caption="Identifiers" icon="fonticon://FontAwesome/f02a" selected> 
+           <vaadin-form-layout size-auto margin> 
+            <vaadin-text-field icon="fonticon://FontAwesome/f007" caption="Patient ID" _id="patientID"></vaadin-text-field> 
+            <vaadin-text-field icon="fonticon://FontAwesome/f02a" caption="Specimen ID" _id="specimenID"></vaadin-text-field> 
+           </vaadin-form-layout> 
+          </tab> 
+          <tab caption="Biophysical" icon="fonticon://FontAwesome/f0c3"> 
+           <vaadin-form-layout caption="Biophysical" size-auto> 
+            <vaadin-grid width="797px" height="307px" selection-mode="multi"> 
+             <table> 
+              <colgroup> 
+               <col property-id="Specimen Category" sortable> 
+               <col property-id="Specimen Type" sortable> 
+              </colgroup> 
+              <thead> 
+               <tr default> 
+                <th plain-text>Specimen Category</th> 
+                <th plain-text>Specimen Type</th> 
+               </tr> 
+              </thead> 
+              <tbody> 
+               <tr> 
+                <td>Ascites</td> 
+                <td>Ascites Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Ascites</td> 
+                <td>Ascites Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Buffy Coat - Parental</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Buffy Coat - Parental</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Buffy Coat Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Buffy Coat Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Cells Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Ficolled Pheresis WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Ficolled RBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Ficolled RBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Ficolled RBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Ficolled WBC Pellet</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Fresh Pheresis</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Lysate RNA</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood RBC Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood RBC Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Blood</td> 
+                <td>Blood WBC Pellet</td> 
+               </tr> 
+               <tr> 
+                <td>Blood Spot Card</td> 
+                <td>Blood Spot Card</td> 
+               </tr> 
+               <tr> 
+                <td>Blood Spot Card</td> 
+                <td>Blood Spot Card</td> 
+               </tr> 
+               <tr> 
+                <td>Blood Spot Card</td> 
+                <td>Blood Spot Card</td> 
+               </tr> 
+               <tr> 
+                <td>Blood Spot Card</td> 
+                <td>Blood Spot Card Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Blood Spot Card</td> 
+                <td>Blood Spot Card Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Blood Spot Card</td> 
+                <td>Blood Spot Card Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Ficolled WBC Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Ficolled WBC Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Ficolled WBC Pellet</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Ficolled WBC Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Fresh Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Fresh Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Fresh Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Frozen Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Frozen Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Frozen Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Ficolled WBC Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Ficolled WBC Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Ficolled WBC Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Fresh Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Fresh Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Fresh Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Frozen Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Frozen Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Frozen Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Lysed WBC Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Lysed WBC Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left Lysed WBC Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left WBC Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left WBC Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Left WBC Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Lysate RNA</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Lysed WBC Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Lysed WBC Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Lysed WBC Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Ficolled WBC Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Ficolled WBC Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Ficolled WBC Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Fresh Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Fresh Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Fresh Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Frozen Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Frozen Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Frozen Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Lysed WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Lysed WBC Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Lysed WBC Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right Lysed WBC Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right WBC Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right WBC Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow Right WBC Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow WBC Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow WBC Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow WBC Pellet</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Bone Marrow WBC Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Biopsy in Media</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Biopsy in Media Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Biopsy in Media Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Biopsy in Media Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Left Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Left Biopsy in Media</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Left Biopsy in Media Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Left Biopsy in Media Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Left Biopsy in Media Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Left Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Left Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Left Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Right Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Right Biopsy in Media</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Right Biopsy in Media Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Right Biopsy in Media Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Right Biopsy in Media Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Right Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Right Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Fresh Bone Marrow Right Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Left Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Left Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Left Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Left Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Right Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Right Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Right Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Bone Marrow</td> 
+                <td>Snap Frozen Bone Marrow Right Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Breast Milk</td> 
+                <td>Breast Milk Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Breast Milk</td> 
+                <td>Breast Milk Fresh in PBS</td> 
+               </tr> 
+               <tr> 
+                <td>Breast Milk</td> 
+                <td>Breast Milk Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Breast Milk</td> 
+                <td>Breast Milk Frozen in PBS</td> 
+               </tr> 
+               <tr> 
+                <td>Breast Milk</td> 
+                <td>Breast Milk Supernatant Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Breast Milk</td> 
+                <td>Breast Milk Supernatant Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bronchial Alveolar Lavage</td> 
+                <td>Bronchial Alveolar Cell Frozen DMSO</td> 
+               </tr> 
+               <tr> 
+                <td>Bronchial Alveolar Lavage</td> 
+                <td>Bronchial Alveolar Cells Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bronchial Alveolar Lavage</td> 
+                <td>Bronchial Alveolar Cells Frozen RNAlater</td> 
+               </tr> 
+               <tr> 
+                <td>Bronchial Alveolar Lavage</td> 
+                <td>Bronchial Alveolar Lavage Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bronchial Alveolar Lavage</td> 
+                <td>Bronchial Alveolar Lavage Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Bronchial Alveolar Lavage</td> 
+                <td>Bronchial Alveolar Supernatant Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Bronchial Alveolar Lavage</td> 
+                <td>Bronchial Alveolar Supernatant Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Buccal</td> 
+                <td>Buccal Cells</td> 
+               </tr> 
+               <tr> 
+                <td>Buccal</td> 
+                <td>Buccal Cells Left</td> 
+               </tr> 
+               <tr> 
+                <td>Buccal</td> 
+                <td>Buccal Cells Right</td> 
+               </tr> 
+               <tr> 
+                <td>Buccal</td> 
+                <td>Buccal Smear</td> 
+               </tr> 
+               <tr> 
+                <td>Buccal</td> 
+                <td>Buccal Swab</td> 
+               </tr> 
+               <tr> 
+                <td>Buccal</td> 
+                <td>Buccal Swab</td> 
+               </tr> 
+               <tr> 
+                <td>Buccal</td> 
+                <td>Buccal Swab</td> 
+               </tr> 
+               <tr> 
+                <td>Buccal</td> 
+                <td>Buccal Swab Left</td> 
+               </tr> 
+               <tr> 
+                <td>Buccal</td> 
+                <td>Buccal Swab Right</td> 
+               </tr> 
+               <tr> 
+                <td>Cell Culture</td> 
+                <td>Cell Culture Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Cell Culture</td> 
+                <td>Cell Culture Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Cell Suspension</td> 
+                <td>Cell Suspension</td> 
+               </tr> 
+               <tr> 
+                <td>Cervical Cells</td> 
+                <td>Cervical Cell Pellet Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Cervical Cells</td> 
+                <td>Cervical Cell Supernatant Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Cervical Cells</td> 
+                <td>Cervical Cell Supernatant Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Cervical Cells</td> 
+                <td>Cervical Cells Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Cervical Cells</td> 
+                <td>Cervical Cells Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Cord Blood</td> 
+                <td>Cord Blood Buffy Coat</td> 
+               </tr> 
+               <tr> 
+                <td>Cord Blood</td> 
+                <td>Cord Blood Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Cord Blood</td> 
+                <td>Cord Blood Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>CSF</td> 
+                <td>CSF Cells Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>CSF</td> 
+                <td>CSF Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>CSF</td> 
+                <td>CSF Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>CSF</td> 
+                <td>CSF Supernatant Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>CSF</td> 
+                <td>CSF Supernatant Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>CSF</td> 
+                <td>CSF WBC</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Bullet Benign</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Bullet Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Bullet Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Bullet Normal</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Bullet Primary</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Bullet Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Specimen in Glutaraldehyde Benign</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Specimen in Glutaraldehyde Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Specimen in Glutaraldehyde Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Specimen in Glutaraldehyde Normal</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Specimen in Glutaraldehyde Primary</td> 
+               </tr> 
+               <tr> 
+                <td>EM Glut</td> 
+                <td>Specimen in Glutaraldehyde Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Filtrate</td> 
+                <td>Modified Ultra Filtrate Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Filtrate</td> 
+                <td>Modified Ultra Filtrate Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Filtrate</td> 
+                <td>Ultra Filtrate Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Filtrate</td> 
+                <td>Ultra Filtrate Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed BM Core Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed BM Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed BM Core Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed BM Core Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed Tissue Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed Tissue Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed Tissue Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed Tissue Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed Tissue Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Formalin Fixed Tissue</td> 
+                <td>Formalin Fixed Tissue Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in Media Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in Media Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in Media Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in Media Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in Media Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in Media Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in RNAlater Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in RNAlater Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in RNAlater Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in RNAlater Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in RNAlater Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue in RNAlater Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Fresh Tissue</td> 
+                <td>Fresh Tissue Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen OCT Bone Marrow Core Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in Media Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in Media Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in Media Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in Media Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in Media Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in Media Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in RNALater Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in RNALater Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in RNALater Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue in RNALater Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue RNALater Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Frozen Tissue RNAlater Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Embedded Tissue Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Embedded Tissue Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Embedded Tissue Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Embedded Tissue Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Embedded Tissue Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Embedded Tissue Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Scroll Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Scroll Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Scroll Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Scroll Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Scroll Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>OCT Scroll Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Snap Frozen Bone Marrow Core Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Snap Frozen Tissue Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Snap Frozen Tissue Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Snap Frozen Tissue Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Snap Frozen Tissue Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Snap Frozen Tissue Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Frozen Tissue</td> 
+                <td>Snap Frozen Tissue Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Nasopharyngeal Cells</td> 
+                <td>Nasopharyngeal Cell Suspension</td> 
+               </tr> 
+               <tr> 
+                <td>Nasopharyngeal Cells</td> 
+                <td>Nasopharyngeal Swab Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Nasopharyngeal Cells</td> 
+                <td>Nasopharyngeal Swab Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Nasopharyngeal Cells</td> 
+                <td>Nasopharyngeal Wash Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Nasopharyngeal Cells</td> 
+                <td>Nasopharyngeal Wash Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>cDNA</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>DNA</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>DNA</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>DNA</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>DNA - Blood</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>DNA - Constitutional</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>DNA - Normal tissue</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>DNA - Tumor tissue</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>Lysate</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>miRNA</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>RNA</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>RNA</td> 
+               </tr> 
+               <tr> 
+                <td>Nucleic Acid</td> 
+                <td>RNA</td> 
+               </tr> 
+               <tr> 
+                <td>Other</td> 
+                <td>Bile Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Other</td> 
+                <td>Other</td> 
+               </tr> 
+               <tr> 
+                <td>Other</td> 
+                <td>Pancreatic Juice Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Other</td> 
+                <td>Semen Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Other</td> 
+                <td>Unknown Ficolled WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Clot</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Clot Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Clot Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Clot Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Core Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Core Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block BM Core Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Core Biopsy Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Core Biopsy Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Core Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Core Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Core Biopsy Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block TMA</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Block Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Cell Block Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Cell Block Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Cell Block Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Block Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Block Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Block Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Block Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Block Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Block Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Core Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Core Biopsy Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Core Biopsy Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Core Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Core Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Core Biopsy Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll TMA</td> 
+               </tr> 
+               <tr> 
+                <td>Paraffin Embedded Tissue</td> 
+                <td>Paraffin Scroll Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Peripheral Blood Stem Cells</td> 
+                <td>Peripheral Blood Stem Cells Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Peripheral Blood Stem Cells</td> 
+                <td>Peripheral Blood Stem Cells Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Peripheral Blood Stem Cells</td> 
+                <td>Peripheral Blood Stem Cells Lysed</td> 
+               </tr> 
+               <tr> 
+                <td>Peritoneal Fluid</td> 
+                <td>Peritoneal Fluid Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Peritoneal Wash</td> 
+                <td>Peritoneal Wash Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Plasma</td> 
+                <td>Plasma Bone Marrow Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Plasma</td> 
+                <td>Plasma Bone Marrow Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Plasma</td> 
+                <td>Plasma Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Plasma</td> 
+                <td>Plasma Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Plasma</td> 
+                <td>Plasma Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Plasma</td> 
+                <td>Plasma Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Plasma</td> 
+                <td>Plasma Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Plasma</td> 
+                <td>Plasma Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Plasmacytoma</td> 
+                <td>Plasmacytoma Marrow Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Plasmacytoma</td> 
+                <td>Plasmacytoma Marrow Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Pleural Fluid</td> 
+                <td>Pleural Fluid</td> 
+               </tr> 
+               <tr> 
+                <td>Pleural Fluid</td> 
+                <td>Pleural Fluid WBC</td> 
+               </tr> 
+               <tr> 
+                <td>Protein</td> 
+                <td>Liposacharide</td> 
+               </tr> 
+               <tr> 
+                <td>Protein</td> 
+                <td>Liposacharide Control</td> 
+               </tr> 
+               <tr> 
+                <td>Protein</td> 
+                <td>Phytohemagglutinin</td> 
+               </tr> 
+               <tr> 
+                <td>Protein</td> 
+                <td>Phytohemagglutinin Control</td> 
+               </tr> 
+               <tr> 
+                <td>Saline Fixed Tissue</td> 
+                <td>Saline Fixed Tissue Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Saliva</td> 
+                <td>Saliva Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Saliva</td> 
+                <td>Saliva Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Serum</td> 
+                <td>Serum Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Serum</td> 
+                <td>Serum Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Serum</td> 
+                <td>Serum Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Serum</td> 
+                <td>Serum Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Aspirate Stained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Aspirate Stained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Aspirate Stained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Aspirate Stained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Aspirate Unstained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Aspirate Unstained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Aspirate Unstained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Aspirate Unstained Slides</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Cover Slip Stained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Cover Slip Stained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Cover Slip Stained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Cover Slip Stained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Cover Slip Unstained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Cover Slip Unstained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Cover Slip Unstained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Cover Slip Unstained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Left Aspirate Stained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Left Aspirate Stained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Left Aspirate Stained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Left Aspirate Stained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Left Aspirate Unstained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Left Aspirate Unstained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Left Aspirate Unstained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Left Aspirate Unstained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Right Aspirate Stained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Right Aspirate Stained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Right Aspirate Stained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Right Aspirate Stained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Right Aspirate Unstained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Right Aspirate Unstained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Right Aspirate Unstained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Bone Marrow Right Aspirate Unstained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Cytospin Stained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Cytospin Unstained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media Stained Touch Prep Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media Stained Touch Prep Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media Stained Touch Prep Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media Stained Touch Prep Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media Stained Touch Prep Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media Stained Touch Prep Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media UnStained Touch Prep Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media UnStained Touch Prep Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media UnStained Touch Prep Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media UnStained Touch Prep Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media UnStained Touch Prep Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh In Media UnStained Touch Prep Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Stained Touch Prep Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Stained Touch Prep Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Stained Touch Prep Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Stained Touch Prep Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Stained Touch Prep Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Stained Touch Prep Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Unstained Touch Prep Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Unstained Touch Prep Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Unstained Touch Prep Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Unstained Touch Prep Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Unstained Touch Prep Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Fresh Unstained Touch Prep Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Bone Marrow Core Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Touch Prep Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Touch Prep Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Touch Prep Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Touch Prep Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Touch Prep Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Touch Prep Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Stained Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT UnStained Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT UnStained Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT UnStained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT UnStained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT UnStained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Unstained Touch Prep Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Unstained Touch Prep Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Unstained Touch Prep Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Unstained Touch Prep Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Unstained Touch Prep Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT Unstained Touch Prep Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen OCT UnStained Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Stained Touch Prep Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Stained Touch Prep Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Stained Touch Prep Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Stained Touch Prep Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Stained Touch Prep Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Stained Touch Prep Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Unstained OCT Bone Marrow Core Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Unstained Touch Prep Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Unstained Touch Prep Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Unstained Touch Prep Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Unstained Touch Prep Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Unstained Touch Prep Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Frozen Unstained Touch Prep Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Blood Clot</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Clot</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Clot Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Clot Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Clot Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Core Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Core Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained BM Core Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Control</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Core Biopsy Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Core Biopsy Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Core Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Core Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Core Biopsy Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Cytology</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained TMA</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Stained Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin TMA Unstained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Blood Clot</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Clot</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Clot Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Clot Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Clot Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Core Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Core Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained BM Core Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Core Biopsy Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Core Biopsy Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Core Biopsy Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Core Biopsy Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Core Biopsy Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Cytology</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Uncharged Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Uncharged Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Uncharged Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Uncharged Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Uncharged Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Uncharged Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Paraffin Unstained Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Parffin Stained Core Biopsy Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Peripheral Blood Smear CoverSlip Stained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Peripheral Blood Smear CoverSlip Unstained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Stained Cover Slips</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Stained Peripheral Blood</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Unstained Cover Slips</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Unstained Peripheral Blood Slides</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin TMA Unstained</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained BM Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained BM Clot</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained BM Core Biopsy</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained BM Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Core Biopsy Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Cytology</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Uncharged Benign</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Uncharged Diseased</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Uncharged Metastatic</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Uncharged Normal</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Uncharged Primary</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Uncharged Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Slides</td> 
+                <td>Wax Dipped Paraffin Unstained Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Sputum</td> 
+                <td>Sputum Cells Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Sputum</td> 
+                <td>Sputum Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Sputum</td> 
+                <td>Sputum Fresh With Preservatives</td> 
+               </tr> 
+               <tr> 
+                <td>Sputum</td> 
+                <td>Sputum Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Sputum</td> 
+                <td>Sputum Supernatant with Inhibitors Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Sputum</td> 
+                <td>Sputum Supernatant with Inhibitors Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Sputum</td> 
+                <td>Sputum Supernatant without Inhibitors Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Sputum</td> 
+                <td>Sputum Supernatant without Inhibitors Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Sweat</td> 
+                <td>Sweat Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Sweat</td> 
+                <td>Sweat Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Tracheal Aspirate</td> 
+                <td>Tracheal Aspirate Cells Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Tracheal Aspirate</td> 
+                <td>Tracheal Aspirate Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Tracheal Aspirate</td> 
+                <td>Tracheal Aspirate Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Tracheal Aspirate</td> 
+                <td>Tracheal Aspirate Supernatant Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Unknown</td> 
+                <td>Unknown</td> 
+               </tr> 
+               <tr> 
+                <td>Urine</td> 
+                <td>Urine Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Urine</td> 
+                <td>Urine Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Urine</td> 
+                <td>Urine Fresh</td> 
+               </tr> 
+               <tr> 
+                <td>Urine</td> 
+                <td>Urine Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Urine</td> 
+                <td>Urine Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Urine</td> 
+                <td>Urine Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Urine</td> 
+                <td>Urine Pellet Frozen</td> 
+               </tr> 
+               <tr> 
+                <td>Urine</td> 
+                <td>Urine Supernatant Frozen</td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </vaadin-grid> 
+           </vaadin-form-layout> 
+          </tab> 
+          <tab caption="Sponsor" icon="fonticon://FontAwesome/f0c0"> 
+           <vaadin-form-layout caption="Sponsor" size-auto margin> 
+            <vaadin-horizontal-layout spacing> 
+             <vaadin-panel caption="Sponsor Group"> 
+              <vaadin-horizontal-layout spacing margin> 
+               <vaadin-vertical-layout size-auto> 
+                <vaadin-check-box caption="Children's Oncology Group (COG)"></vaadin-check-box> 
+                <vaadin-check-box caption="Gynecologic Oncology Group (GOG)"></vaadin-check-box> 
+                <vaadin-check-box caption="SWOG Group"></vaadin-check-box> 
+               </vaadin-vertical-layout> 
+               <vaadin-vertical-layout size-auto> 
+                <vaadin-check-box caption="Other"></vaadin-check-box> 
+                <vaadin-check-box caption="NCH Projects"></vaadin-check-box> 
+               </vaadin-vertical-layout> 
+              </vaadin-horizontal-layout> 
+             </vaadin-panel> 
+             <vaadin-panel caption="Protocol(s)"> 
+              <vaadin-horizontal-layout spacing margin> 
+               <vaadin-text-field description="(comma-delimited list)" caption="Protocol ID(s)" input-prompt="(comma-delimited list)"></vaadin-text-field> 
+              </vaadin-horizontal-layout> 
+             </vaadin-panel> 
+            </vaadin-horizontal-layout> 
+           </vaadin-form-layout> 
+          </tab> 
+          <tab caption="Recent Activity" icon="fonticon://FontAwesome/f017"> 
+           <vaadin-form-layout caption="Activity" size-auto> 
+            <vaadin-check-box caption="Accessioned in last 24 hours"></vaadin-check-box> 
+            <vaadin-check-box caption="Recently viewed by you in STARS"></vaadin-check-box> 
+           </vaadin-form-layout> 
+          </tab> 
+         </vaadin-tab-sheet> 
+         <vaadin-panel caption="Filters" :right :expand> 
+          <vaadin-vertical-layout size-auto margin> 
+           <vaadin-label icon="fonticon://FontAwesome/f00d" size-auto plain-text>
+             Sponsor Group = COG 
+           </vaadin-label> 
+          </vaadin-vertical-layout> 
+         </vaadin-panel> 
+        </vaadin-horizontal-layout> 
+       </vaadin-vertical-layout> 
+       <vaadin-grid width="804px" selection-mode="multi"> 
+        <table> 
+         <colgroup> 
+          <col property-id="Project" sortable> 
+          <col property-id="Status" sortable> 
+         </colgroup> 
+         <thead> 
+          <tr default> 
+           <th plain-text>Project</th> 
+           <th plain-text>Status</th> 
+          </tr> 
+         </thead> 
+         <tbody> 
+          <tr> 
+           <td>Customer Project 1</td> 
+           <td>OK</td> 
+          </tr> 
+          <tr> 
+           <td>Customer Project 2</td> 
+           <td>OK</td> 
+          </tr> 
+          <tr> 
+           <td>Customer Project 3</td> 
+           <td>OK</td> 
+          </tr> 
+          <tr> 
+           <td>Customer Project 4</td> 
+           <td>OK</td> 
+          </tr> 
+          <tr> 
+           <td>Customer Project 5</td> 
+           <td>OK</td> 
+          </tr> 
+          <tr> 
+           <td>Customer Project 6</td> 
+           <td>OK</td> 
+          </tr> 
+          <tr> 
+           <td>Customer Project 7</td> 
+           <td>OK</td> 
+          </tr> 
+          <tr> 
+           <td>Customer Project 8</td> 
+           <td>OK</td> 
+          </tr> 
+          <tr> 
+           <td>Customer Project 9</td> 
+           <td>OK</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+       </vaadin-grid> 
+      </vaadin-css-layout> 
+     </vaadin-css-layout> 
+    </vaadin-css-layout> 
+   </vaadin-vertical-layout> 
+  </vaadin-horizontal-layout>  
+ </body>
+</html>
